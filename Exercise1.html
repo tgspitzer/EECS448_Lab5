@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>EECS448 Lab5 Exercise1</title>
+    </head>
+
+    <body>
+        <h1>EECS448 Lab5 Exercise1</h1>
+        <p>Please input a password into password 1 field and validate password in password 2 field.
+            <br>Password must be 8 characters or longer</p>
+        <form>
+            <p>Password1:</p>
+            <input type="text" id="password1" name="Password1"><br>
+            <p>Password2:</p>
+            <input type="text" id="password2" name="Password2"><br>
+        </form>
+        <button type="button" id="validate" onclick="validate()">Validate Password</button>
+        <p id="error"></p>
+    </body>
+    <script>
+        function validate() {
+            if(document.getElementById("password1").value != document.getElementById("password2").value)
+            {
+                document.getElementById("error").innerHTML = "Error, Passwords dont match"
+            }
+            else if(document.getElementById("password1").value.length < 8)
+            {
+                document.getElementById("error").innerHTML = "Error, Password1 is less than 8 characters"
+            }
+            else
+            {
+                document.getElementById("error").innerHTML = "Passwords match"
+            }
+        }
+    </script>
+</html>
