@@ -1,0 +1,24 @@
+body
+{
+  background-color:blue;
+  background-image: url("https://media.istockphoto.com/photos/synthwave-retrowave-christmas-background-picture-id1431756401?b=1&k=20&m=1431756401&s=170667a&w=0&h=I6ik8_HMnFcE_6PHlGOgDcghNxDphopWZukNn-FtiiM=");
+  background-size: 100%;
+}
+p
+{
+  color:white;
+  font-family:arial;
+  font-size:14pt;
+}
+h4, h1, h2
+{
+  color:pink
+}
+a
+{
+  color:red
+}
+a:hover
+{
+  color:green
+}

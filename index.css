@@ -1,0 +1,14 @@
+body
+{
+  background-color: #7FFD
+}
+a
+{
+  color: #8A2BE2;
+  font-size: 40px
+}
+a:hover
+{
+  color:red;
+  font-size: 50px
+}
