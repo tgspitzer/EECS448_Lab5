@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <title> EECS448 Lab5 Exercise4 </title>
+        <link href="CSSManipulation.css"
+          rel="stylesheet"
+          type="text/css">
+        <style>
+        #text{
+          border: thick solid black;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>EECS448 Lab5 Exercise4</h1>
+        <p id="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam ipsum, egestas a vestibulum cursus, tempus sed neque. Sed quis dui vitae nibh maximus finibus. Vivamus a nisi quis nunc elementum pulvinar. Praesent ac mi nisl. Integer et sapien et urna vehicula laoreet vel eget diam. Curabitur fringilla dui mauris. Ut eleifend rhoncus arcu id suscipit. Donec a ex at turpis efficitur laoreet. Suspendisse viverra quam ut sagittis eleifend. Vestibulum lacinia sapien dapibus fermentum consequat. Fusce suscipit felis vel suscipit laoreet. Proin suscipit magna felis, sit amet finibus tortor lobortis eget. Fusce nec tortor consectetur nibh mollis ultrices sit amet nec eros.
+
+          Proin id lorem urna. Suspendisse leo enim, pulvinar ac quam ut, volutpat tincidunt nunc. Mauris nec tortor odio. Sed quis commodo lectus. Morbi eu ultricies urna. Nunc sollicitudin varius augue, sit amet feugiat enim pellentesque fermentum. Nulla rhoncus luctus nulla, vel molestie tellus fermentum at. Quisque sodales lorem nibh. Ut lectus nulla, fermentum ac sodales id, accumsan sit amet augue. Vivamus venenatis aliquam nisi vitae commodo. Phasellus diam elit, eleifend fermentum nisi id, hendrerit aliquet enim. Fusce vel metus at metus egestas porta. Proin cursus venenatis accumsan.
+
+          Nulla ultrices consectetur augue, vitae suscipit enim iaculis in. Vivamus mattis pellentesque risus sit amet accumsan. Duis purus urna, placerat ac quam eu, venenatis dignissim ligula. Sed magna dui, sodales id accumsan et, ultrices vel metus. Donec suscipit lacus non orci lacinia placerat. Pellentesque vel volutpat diam, sit amet aliquet augue. Quisque in tortor ac erat molestie porta. Morbi vel elementum ipsum. Aliquam erat volutpat.
+
+          Quisque id augue tincidunt, faucibus augue et, iaculis nisi. Suspendisse rhoncus nec orci in fringilla. Nulla at odio rutrum, consequat dui eget, vestibulum metus. Suspendisse tincidunt lectus a viverra vestibulum. Integer eu scelerisque justo. Donec finibus nibh eget tellus luctus, ac pulvinar sem fringilla. Quisque ac lobortis elit. Cras vestibulum erat eget tempus feugiat. Aenean efficitur gravida nibh, venenatis malesuada sem. Sed eleifend pharetra nisi, non scelerisque enim sollicitudin lobortis.
+
+          Mauris eu lectus sed lorem bibendum fringilla vitae vel leo. Sed facilisis mauris a congue auctor. Suspendisse ut quam vehicula sem malesuada consectetur. Donec vitae leo vel lorem tincidunt condimentum et at mauris. Quisque tempor quis massa sit amet bibendum. Vestibulum turpis metus, convallis sit amet odio non, ultrices ullamcorper felis. Praesent quis tempus sapien, eu ultricies risus. Fusce pellentesque nec diam quis sagittis. Duis a quam vitae mauris tempus blandit. In accumsan eget quam vitae fermentum. Quisque semper venenatis auctor. Proin maximus quis libero ut euismod.
+        </p><br>
+        <form>
+          <h4>Border:</h4>
+          <label for="borRed">Red Value: (0-255)</label>
+          <input type="number" id="borR" name="borRed" min="0" max="255">
+          <label for="borGreen">Green Value: (0-255)</label>
+          <input type="number" id="borG" name="borGreen" min="0" max="255">
+          <label for="borBlue">Blue Value: (0-255)</label>
+          <input type="number" id="borB" name="borBlue" min="0" max="255"><br>
+
+          <h4>Background Color:</h4>
+          <label for="backRed">Red Value: (0-255)</label>
+          <input type="number" id="backR" name="backRed" min="0" max="255">
+          <label for="backGreen">Green Value: (0-255)</label>
+          <input type="number" id="backG" name="backGreen" min="0" max="255">
+          <label for="backBlue">Blue Value: (0-255)</label>
+          <input type="number" id="backB" name="backBlue" min="0" max="255"><br>
+        </form>
+        <button type="button" id="apply" onclick="apply()">Apply</button>
+    <script>
+      var textField = document.getElementById("text");
+      function apply()
+      { //obtain all values in input fields
+        var borR = document.getElementById("borR").value;
+        var borG = document.getElementById("borG").value;
+        var borB = document.getElementById("borB").value;
+        var backR = document.getElementById("backR").value;
+        var backG = document.getElementById("backG").value;
+        var backB = document.getElementById("backB").value;
+
+        textField.style.backgroundColor = 'rgb('+backR+','+backG+','+backB+')'; //set background color
+        textField.style.borderColor = 'rgb('+borR+', '+borG+', '+borB+')'; //set border color
+      }
+    </script>
+</html>
